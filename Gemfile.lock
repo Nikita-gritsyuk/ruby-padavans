@@ -122,6 +122,7 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
+    pg (0.21.0)
     public_suffix (2.0.5)
     rack (1.6.8)
     rack-test (0.6.3)
@@ -267,6 +268,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jsoneditor-rails
+  pg
   rails (= 4.2.6)
   refinerycms (~> 3.0)
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.1)
