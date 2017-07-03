@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/arpit-clarion/dragonfly-activerecord.git
+  revision: 3c046a2928dabd9d5bd3d398371bbc057b3c1b62
+  specs:
+    dragonfly-activerecord (1.0.0)
+      activerecord (>= 3.2.6)
+      dragonfly (>= 1.0.2)
+
+GIT
   remote: git://github.com/fernandoaleman/refinerycms-bootstrap.git
   revision: b90e39e106abeb77dca7ae4586229b29fe5c68b4
   branch: master
@@ -265,6 +273,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  dragonfly-activerecord!
   jbuilder (~> 2.0)
   jquery-rails
   jsoneditor-rails

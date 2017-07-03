@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'dragonfly-activerecord/store'
 Refinery::Images.configure do |config|
   # Configures the maximum allowed upload size (in bytes) for an image
   # config.max_image_size = 5242880
@@ -42,7 +43,7 @@ Refinery::Images.configure do |config|
 
   # Configure Dragonfly custom storage backend
   # The custom_backend setting by default defers to the core setting for this but can be set just for images.
-  # config.custom_backend_class = nil
-  # config.custom_backend_opts = {}
+  config.custom_backend_class = 'Dragonfly::ActiveRecord::Store'
+  config.custom_backend_opts = {}
 
 end

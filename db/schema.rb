@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630105620) do
+ActiveRecord::Schema.define(version: 20170703081611) do
 
   create_table "refinery_authentication_devise_roles", force: :cascade do |t|
     t.string "title"
@@ -177,5 +177,20 @@ ActiveRecord::Schema.define(version: 20170630105620) do
 
   add_index "seo_meta", ["id"], name: "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], name: "id_type_index_on_seo_meta"
+
+  create_table "storage_chunks", force: :cascade do |t|
+    t.integer "file_id"
+    t.integer "idx"
+    t.binary  "encoded_data"
+  end
+
+  add_index "storage_chunks", ["file_id"], name: "index_storage_chunks_on_file_id"
+
+  create_table "storage_files", force: :cascade do |t|
+    t.text     "metadata"
+    t.datetime "accessed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
