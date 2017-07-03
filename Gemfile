@@ -11,7 +11,7 @@ end
 group :production, :test do
   gem 'pg'
 end
-#database filestore
+# Database filestore
 gem 'dragonfly-activerecord' , git: "git://github.com/arpit-clarion/dragonfly-activerecord.git"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
